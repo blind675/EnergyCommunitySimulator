@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import type { Member, Algorithm, TabKey, PriceConfig } from "./types";
-import { MONTHS, ALGO_LABELS, PRICE_GRID, PRICE_INJECT, PRICE_COMMUNITY, DEFAULT_MEMBERS, COLORS } from "./constants";
+import { MONTHS, ALGO_LABELS, ALGO_DESCRIPTIONS, PRICE_GRID, PRICE_INJECT, PRICE_COMMUNITY, DEFAULT_MEMBERS, COLORS } from "./constants";
 import { simulate } from "./lib/simulate";
 import { fmt, fmtLei } from "./lib/format";
 import { generateResultsPdf } from "./lib/generatePdf";
@@ -89,6 +89,7 @@ export default function Page() {
             >
               {Object.entries(ALGO_LABELS).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
             </select>
+            <span className="text-[10px] text-slate-400 max-w-[340px] leading-snug">{ALGO_DESCRIPTIONS[algorithm]}</span>
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-[10px] text-slate-300 uppercase tracking-[0.08em]">Prețuri (lei/kWh)</label>

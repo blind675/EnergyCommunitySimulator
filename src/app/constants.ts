@@ -29,17 +29,22 @@ export const PROFILES: Record<ProfileKey, number[]> = {
 export const MEMBER_TYPES: MemberType[] = ["prosumator", "consumator"];
 export const PROFILE_LABELS: Record<ProfileKey, string> = { household: "Gospodărie", imm: "IMM (afacere mică)", public: "Instituție publică", household_small: "Gospodărie mică" };
 export const ALGO_LABELS: Record<Algorithm, string> = { proportional: "Proporțional (recomandat)", equal: "Cote egale", priority: "Ordine prioritate" };
+export const ALGO_DESCRIPTIONS: Record<Algorithm, string> = {
+  proportional: "Fiecare membru primește energie proporțional cu consumul său din interval. Echitabil și ușor de explicat — recomandat pentru Altringen.",
+  equal: "Energia se împarte în cote egale între consumatorii activi. Potrivit pentru comunități mici cu consum similar între membri.",
+  priority: "Membrii au o ordine de prioritate stabilită în statut. Potrivit pentru comunități cu membri vulnerabili energetic.",
+};
 
 export const PRICE_GRID = 1.25; // lei/kWh — price consumers pay to supplier
 export const PRICE_INJECT = 0.55; // lei/kWh — price producers get for injecting to grid
 export const PRICE_COMMUNITY = 0.90; // lei/kWh — internal community transaction price
 
 export const DEFAULT_MEMBERS: Member[] = [
-  { id: 1, name: "Casa (Bora)", type: "prosumator", peakKw: 3, profileKey: "household", avgDailyKwh: 2, color: "#4ade80" },
-  { id: 2, name: "Casa (Lazar)", type: "consumator", peakKw: 0, profileKey: "household", avgDailyKwh: 7, color: "#60a5fa" },
-  { id: 3, name: "Casa (Bulzan)", type: "prosumator", peakKw: 10, profileKey: "household", avgDailyKwh: 8, color: "#f472b6" },
-  { id: 4, name: "Pensiunea Altringen", type: "prosumator", peakKw: 15, profileKey: "imm", avgDailyKwh: 35, color: "#fb923c" },
-  { id: 5, name: "Primăria Bogda", type: "consumator", peakKw: 0, profileKey: "public", avgDailyKwh: 60, color: "#a78bfa" },
+  { id: 1, name: "Membru 1 (Casa)", type: "prosumator", peakKw: 3, profileKey: "household", avgDailyKwh: 2, color: "#4ade80" },
+  { id: 2, name: "Membru 2 (Casa)", type: "consumator", peakKw: 0, profileKey: "household", avgDailyKwh: 7, color: "#60a5fa" },
+  { id: 3, name: "Membru 3 (Casa)", type: "prosumator", peakKw: 10, profileKey: "household", avgDailyKwh: 8, color: "#f472b6" },
+  { id: 4, name: "Membru 4 (Pensiune)", type: "prosumator", peakKw: 15, profileKey: "imm", avgDailyKwh: 35, color: "#fb923c" },
+  { id: 5, name: "Membru 5 (Primarie)", type: "consumator", peakKw: 0, profileKey: "public", avgDailyKwh: 60, color: "#a78bfa" },
 ];
 
 export const COLORS = ["#4ade80", "#60a5fa", "#f472b6", "#fb923c", "#a78bfa", "#34d399", "#fbbf24", "#f87171"];
