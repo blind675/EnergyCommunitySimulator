@@ -41,8 +41,8 @@ export const PRICE_COMMUNITY = 0.90; // lei/kWh — internal community transacti
 
 export const DEFAULT_MEMBERS: Member[] = [
   { id: 1, name: "Membru 1 (Casa)", type: "prosumator", peakKw: 3, profileKey: "household", avgDailyKwh: 2, color: "#4ade80" },
-  { id: 2, name: "Membru 2 (Casa)", type: "consumator", peakKw: 0, profileKey: "household", avgDailyKwh: 7, color: "#60a5fa" },
-  { id: 3, name: "Membru 3 (Casa)", type: "prosumator", peakKw: 10, profileKey: "household", avgDailyKwh: 8, color: "#f472b6" },
+  { id: 2, name: "Membru 2 (Casa)", type: "consumator", peakKw: 0, profileKey: "household", avgDailyKwh: 5.6, color: "#60a5fa" },
+  { id: 3, name: "Membru 3 (Casa)", type: "prosumator", peakKw: 10, profileKey: "household", avgDailyKwh: 15.5, color: "#f472b6" },
   { id: 4, name: "Membru 4 (Pensiune)", type: "prosumator", peakKw: 15, profileKey: "imm", avgDailyKwh: 35, color: "#fb923c" },
   { id: 5, name: "Membru 5 (Primarie)", type: "consumator", peakKw: 0, profileKey: "public", avgDailyKwh: 60, color: "#a78bfa" },
 ];
